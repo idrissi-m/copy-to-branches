@@ -70,7 +70,8 @@ for CURRENT_BRANCH in ${ALL_THE_BRANCHES[@]};
     
     # Check out the current branch, but only if
     # the branch is NOT the same as the key branch
-    if [ "${KEY_BRANCH}" != "${CURRENT_BRANCH}" ];
+    # if [ "${KEY_BRANCH}" != "${CURRENT_BRANCH}" ];
+    if [ "${KEY_BRANCH}" != "${CURRENT_BRANCH}" ] && [ "${CURRENT_BRANCH}" != "main" ]  ;
     then
       echo "--GIT FETCH origin"
       git fetch origin
